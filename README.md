@@ -25,7 +25,7 @@
    ```bash
    git clone https://github.com/TheMarveled/os-sim.git
    ```
-2. Open the `index.html` file in your preferred web browser.
+2. Open the `turn_on.html` file in your preferred web browser.
 3. Enter a username to personalize your experience, and start using OS-Sim!
 
 ## Future Plans
