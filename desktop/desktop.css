@@ -1,0 +1,45 @@
+/* Desktop UI styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../wallpapers/default-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#taskbar #clock {
+    margin-left: auto;
+    font-size: 16px;
+}
+
+.desktop-icon {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.desktop-icon:hover {
+    transform: scale(1.1);
+}
