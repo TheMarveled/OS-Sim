@@ -1,4 +1,5 @@
-# OS-Sim
+![logo-icon](https://github.com/user-attachments/assets/4455bb93-1bd7-4456-b1cf-3600b571cb49)
+
  
 # OS-Sim: A Simple Web-Based Operating System Emulator
 
