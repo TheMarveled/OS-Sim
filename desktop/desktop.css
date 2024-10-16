@@ -1,31 +1,72 @@
-/* Desktop UI styling */
 body {
-    margin: 0;
-    padding: 0;
-    background: url('../wallpapers/default-wallpaper.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: none; /* Default to no image */
+    background-color: #ffffff; /* Default background color (black or your choice) */
+    background-size: auto; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    font-family: 'Arial', sans-serif; /* Updated font family */
+    color: #333; /* Default text color for body */
 }
 
+/* Taskbar styling */
 #taskbar {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 40px;
-    background-color: #222;
+    height: 50px; /* Increased height of the taskbar */
+    background-color: rgba(30, 30, 30, 0.9); /* Darker color for better visibility */
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    color: white;
-    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.5);
+    padding: 0 10px; /* Padding around the taskbar */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
-#taskbar #clock {
-    margin-left: auto;
-    font-size: 16px;
+/* Taskbar items */
+.taskbar-item {
+    position: relative; /* Position relative for tooltip positioning */
+    margin-right: 20px; /* Spacing between items */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center; /* Align icons */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Taskbar icons */
+.taskbar-item img {
+    width: 25px; /* Set icon size */
+    height: 25px; /* Set icon size */
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    bottom: 100%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Background color for tooltip */
+    color: white; /* Tooltip text color */
+    padding: 5px 10px; /* Padding for tooltip */
+    border-radius: 5px; /* Rounded corners for tooltip */
+    white-space: nowrap; /* Prevent text wrapping */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Invisible by default */
+    transition: visibility 0s, opacity 0.2s ease-in-out; /* Smooth visibility transition */
+}
+
+/* Show tooltip on hover */
+.taskbar-item:hover .tooltip {
+    visibility: visible; /* Show tooltip */
+    opacity: 1; /* Make it visible */
+}
+
+/* Clock styling */
+#clock {
+    margin-left: auto; /* Push the clock to the right */
+    color: #bbb; /* Lighter color for the clock */
+    font-size: 14px; /* Font size for the clock */
+}
+
+/* Desktop icon styling */
 .desktop-icon {
     position: absolute;
     width: 64px;
@@ -42,4 +83,200 @@ body {
 
 .desktop-icon:hover {
     transform: scale(1.1);
+}
+
+/* Start Menu styling */
+#start-menu {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    background-color: #333;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#start-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#start-menu ul li {
+    margin-bottom: 10px;
+}
+
+/* Generic button style for various options */
+.generic-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.generic-btn:hover {
+    background-color: #555;
+}
+
+/* Danger button for Restart */
+.danger-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.danger-btn:hover {
+    background-color: #ff0000;
+}
+
+/* Warning message styling */
+.warning-message {
+    display: none;
+    color: yellow;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Blue button for Log Out */
+.blue-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.blue-btn:hover {
+    background-color: #003bcc;
+}
+
+/* General button styling */
+button {
+    padding: 8px; /* Reduced padding */
+    width: auto; /* Set width to auto for smaller buttons */
+    background-color: #0055ff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Reduced font size */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+    background: linear-gradient(135deg, #0055ff, #0041cc); /* Gradient effect on hover */
+}
+
+/* Wallpaper window styling */
+
+/* Center the wallpaper window on the screen */
+.window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the window */
+    background: rgb(26, 26, 26); /* Background color */
+    border: 1px solid #ccc; /* Border style */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    z-index: 1000; /* Ensure it's above other elements */
+    display: none; /* Initially hidden */
+    color: white; /* Set font color for the window to white */
+}
+
+.window-header {
+    padding: 20px; /* Padding inside header */
+    background-color: #2b2b2b; /* Background color for the header */
+    border-bottom: 1px solid #ccc; /* Border at the bottom */
+    color: white; /* Ensuring the header text is also white */
+}
+
+.close-btn {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: red; /* Set the color to red */
+    font-size: 24px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+}
+
+.window-content {
+    padding: 20px;
+    color: white; /* Ensure the content font color is white */
+}
+
+/* Wallpaper options styling */
+.wallpaper-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.wallpaper-img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 10px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.wallpaper-img:hover {
+    border-color: #00aaff;
+}
+
+/* Solid color options styling */
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.color-box:hover {
+    border-color: #00aaff;
+}
+
+/* Optional: Container for buttons to align them */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align buttons to the left */
+    margin-top: 10px; /* Space above the buttons */
+}
+
+.hidden {
+    display: none; /* Hides the element */
 }

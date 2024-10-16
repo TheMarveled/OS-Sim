@@ -16,12 +16,70 @@
         </div>
     </div>
 
-    <!-- Taskbar with clock and greeting -->
+    <!-- Taskbar with icons -->
     <div id="taskbar">
-        <div id="greeting"></div> <!-- Greeting message -->
-        <div id="clock"></div> <!-- Clock -->
+        <div class="taskbar-item" id="home-icon">
+            <img src="images/home-icon.png" alt="Home">
+            <span class="tooltip">Home</span> <!-- Tooltip for Home -->
+        </div>
+        <div class="taskbar-item">
+            <img src="images/settings-icon.png" alt="Settings">
+            <span class="tooltip">Settings</span> <!-- Tooltip for Settings -->
+        </div>
+        <div class="taskbar-item">
+            <img src="images/user-icon.png" alt="User">
+            <span class="tooltip">User</span> <!-- Tooltip for User -->
+        </div>
+        <div id="clock"></div> <!-- Clock will be updated via JavaScript -->
     </div>
 
+    <!-- Start Menu -->
+    <div id="start-menu" class="hidden">
+        <ul>
+            <li><button id="wallpaper-btn" class="generic-btn">Wallpaper</button></li>
+            <li><button class="generic-btn">Games</button></li>
+            <li><button class="generic-btn">Help</button></li>
+            <div class="button-container">
+                <button id="restart-button" class="danger-btn">Restart</button>
+                <button id="logout-button" class="blue-btn">Log Out</button>
+            </div>
+        </ul>
+        <div id="warning-message" class="warning-message">
+            Warning: You will lose all progress!
+        </div>
+    </div>
+
+    <!-- Wallpaper and Solid Color Selection Window -->
+    <div id="wallpaper-window" class="window" style="display: none;">
+        <div class="window-header">
+            <span>Select a Background</span>
+            <button id="close-wallpaper-window" class="close-btn">&times;</button>
+        </div>
+        <div class="window-content">
+            <!-- Wallpaper Options -->
+            <div class="wallpaper-options">
+                <img src="wallpapers/1.jpg" alt="Wallpaper 1" class="wallpaper-img" id="wallpaper1">
+                <img src="wallpapers/2.jpg" alt="Wallpaper 2" class="wallpaper-img" id="wallpaper2">
+                <img src="wallpapers/3.jpg" alt="Wallpaper 3" class="wallpaper-img" id="wallpaper3">
+                <img src="wallpapers/4.jpg" alt="Wallpaper 4" class="wallpaper-img" id="wallpaper4">
+                <img src="wallpapers/5.jpg" alt="Wallpaper 5" class="wallpaper-img" id="wallpaper5">
+                <img src="wallpapers/6.jpg" alt="Wallpaper 6" class="wallpaper-img" id="wallpaper6">
+            </div>
+
+            <!-- Solid Color Options -->
+            <div class="color-options">
+                <div class="color-box" style="background-color: #1E90FF;" data-color="#1E90FF"></div>
+                <div class="color-box" style="background-color: #32CD32;" data-color="#32CD32"></div>
+                <div class="color-box" style="background-color: #FF4500;" data-color="#FF4500"></div>
+                <div class="color-box" style="background-color: #FFD700;" data-color="#FFD700"></div>
+                <div class="color-box" style="background-color: #8A2BE2;" data-color="#8A2BE2"></div>
+                <div class="color-box" style="background-color: #2F4F4F;" data-color="#2F4F4F"></div>
+            </div>
+        </div>
+        <div class="resize-handle"></div> <!-- Resize handle -->
+    </div>
+
+    <!-- JavaScript for desktop functionality -->
     <script src="desktop.js"></script> <!-- Link to desktop.js -->
 </body>
 </html>

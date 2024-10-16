@@ -53,6 +53,15 @@ button {
 }
 
 button:hover {
-    background-color: #0041cc;
+    background: linear-gradient(180deg, #0055ff, #0041cc);
 }
 
+.guest-option {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #aaa; /* Color for guest option text */
+}
+
+.guest-option p {
+    margin: 0; /* Remove margin from paragraph */
+}

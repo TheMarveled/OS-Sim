@@ -1,0 +1,42 @@
+/* Login modal styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px; /* Adjusted width for minimal content */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+button {
+    padding: 10px; /* Button padding */
+    width: 100%; /* Full width */
+    background-color: #0055ff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Font size */
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0055ff, #0041cc); /* Gradient effect on hover */
+}
