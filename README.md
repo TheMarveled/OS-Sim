@@ -23,7 +23,7 @@
 ## How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/os-sim.git
+   git clone https://github.com/TheMarveled/os-sim.git
    ```
 2. Open the `index.html` file in your preferred web browser.
 3. Enter a username to personalize your experience, and start using OS-Sim!
