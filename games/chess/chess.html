@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="chess.css">
+</head>
+<body>
+    <h1>
+        <img src="chess-piece.png" alt="Chess Piece" style="width: 30px; vertical-align: middle; margin-right: 10px;">
+        Chess Game
+    </h1>
+    <div id="timers">
+        <div id="white-timer">White: 10:00</div>
+        <div id="black-timer">Black: 10:00</div>
+    </div>
+
+    <!-- Board Container -->
+    <div class="board-container">
+        <div id="board" class="board"></div>
+        <button id="undo-button">Undo Move</button> <!-- Move button here -->
+    </div>
+
+    <button id="reset-button">Reset Game</button>
+    <button id="back-button">Back to Desktop</button> <!-- New back button -->
+
+    <script src="chess.js"></script>
+</body>
+</html>

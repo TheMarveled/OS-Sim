@@ -7,12 +7,43 @@
     <link rel="stylesheet" href="snake.css">
 </head>
 <body>
-    <h1>Snake Game</h1>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <h1>
+        <img src="snake.png" alt="Snake" class="snake-logo">
+        Snake Game
+    </h1>
+    <div id="scoreDisplay" style="font-size: 1.5em; margin: 20px;">Score: 0</div> <!-- Score display -->
+    
+    <div class="container">
+        <div class="instructions">
+            <h3>Instructions</h3>
+            <p>Use <strong>WASD</strong> or <strong>ARROW</strong> to move the snake.</p>
+            <p>Eat the <strong>apples</strong> to grow!</p>
+            <p>Don't run into the walls or yourself!</p>
+        </div>
+        <div class="game-container">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+    </div>
+    
     <div class="controls">
         <button id="startBtn">Start Game</button>
         <button id="restartBtn" style="display: none;">Restart Game</button>
+        <div>
+            <button id="backBtn">Back</button>
+        </div>        
     </div>
+    
+    <audio id="crunchSound" src="crunch.mp3"></audio>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p id="finalScore">Your score: 0</p>
+            <button id="restartModalBtn">Restart Game</button>
+        </div>
+    </div>
+
     <script src="snake.js"></script>
 </body>
 </html>

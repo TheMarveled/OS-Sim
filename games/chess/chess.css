@@ -1,0 +1,178 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #930d0d 0%, #ed778f 100%); /* Gradient from blue to pink */
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px; /* Padding around the content */
+}
+
+h1 {
+    margin: 20px 0;
+    color: #fff; /* White text color for better contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+.title-image {
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between image and title */
+    vertical-align: middle; /* Align image vertically with text */
+}
+
+.timer {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #fff; /* White text color for better visibility */
+}
+
+#reset-button { /* Styles for the reset button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5e57; /* Red color for visibility */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and scale */
+    margin-top: 40px; /* Increased space above the button */
+}
+
+#reset-button:hover { /* Hover effect */
+    background-color: #ff4c3b; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#reset-button:active { /* Active effect */
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+.board-container {
+    display: flex; /* Align the board and undo button */
+    align-items: center; /* Center them vertically */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    border: 5px solid #333; /* Thicker border for the board */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.animate-move {
+    animation: moveAnimation 1s ease-in-out; /* Apply animation for piece movement */
+}
+
+@keyframes moveAnimation {
+    0% {
+        transform: scale(1) rotate(0deg); /* Start at original scale and rotation */
+    }
+    50% {
+        transform: scale(1.2) rotate(15deg); /* Scale up and rotate for emphasis */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* Return to original scale and rotation */
+    }
+}
+
+.square:nth-child(odd) {
+    background-color: #f0d9a8; /* Light square color (light wood) */
+}
+
+.square:nth-child(even) {
+    background-color: #b58863; /* Dark square color (dark wood) */
+}
+
+.square:hover {
+    background-color: rgba(255, 255, 0, 0.5); /* Slightly stronger highlight on hover */
+    transition: background-color 0.2s, transform 0.2s; /* Smooth transition */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.selected {
+    outline: 3px solid blue; /* Highlight for selected square */
+    z-index: 1; /* Bring selected square above others */
+}
+
+#back-button { /* Styles for the back to desktop button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Blue color for visibility */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for background and scale */
+    margin-top: 10px; /* Space above the button */
+}
+
+#back-button:hover { /* Hover effect */
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+#back-button:active { /* Active effect */
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* General button styling */
+button {
+    background-color: #007bff; /* Blue color */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Allow width and height */
+    font-size: 16px; /* Font size */
+    margin: 4px 2px; /* Margin for spacing */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effects */
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Active effects */
+button:active {
+    background-color: #004085; /* Even darker blue when clicked */
+}
+
+/* Specific styling for undo button */
+#undo-button {
+    background-color: #007bff; /* Blue color for undo button */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for size */
+    text-align: center; /* Center text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Allow width and height */
+    font-size: 16px; /* Font size */
+    margin-left: 10px; /* Space from the board */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#undo-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#undo-button:active {
+    background-color: #004085; /* Even darker blue when clicked */
+}

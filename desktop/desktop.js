@@ -43,18 +43,17 @@ window.onload = function() {
         wallpaperWindow.style.display = 'none'; // Hide wallpaper window
     };
 
-// Update background when a wallpaper is clicked
-wallpaperImages.forEach(img => {
-    img.onclick = function() {
-        const wallpaperPath = img.getAttribute('src');
-        document.body.style.backgroundImage = `url('${wallpaperPath}')`; // Set selected wallpaper as background
-        document.body.style.backgroundColor = ''; // Clear any solid color
-        document.body.style.backgroundSize = 'auto'; // Ensures the image covers the entire screen
-        document.body.style.backgroundRepeat = 'no-repeat'; // Prevents the image from repeating
-        document.body.style.backgroundPosition = 'center'; // Centers the image
-    };
-});
-
+    // Update background when a wallpaper is clicked
+    wallpaperImages.forEach(img => {
+        img.onclick = function() {
+            const wallpaperPath = img.getAttribute('src');
+            document.body.style.backgroundImage = `url('${wallpaperPath}')`; // Set selected wallpaper as background
+            document.body.style.backgroundColor = ''; // Clear any solid color
+            document.body.style.backgroundSize = 'auto'; // Ensures the image covers the entire screen
+            document.body.style.backgroundRepeat = 'no-repeat'; // Prevents the image from repeating
+            document.body.style.backgroundPosition = 'center'; // Centers the image
+        };
+    });
 
     // Update background color when a solid color is clicked
     colorBoxes.forEach(box => {
@@ -91,9 +90,14 @@ wallpaperImages.forEach(img => {
     });
     
     document.getElementById('help-button').onclick = function() {
-        window.location.href = '/Users/kyledring/Library/Mobile Documents/com~apple~CloudDocs/OS Sim/OS-Sim/common/help/help.html'; }
+        window.location.href = '/Users/kyledring/Library/Mobile Documents/com~apple~CloudDocs/OS Sim/OS-Sim/common/help/help.html'; 
+    };
 
+    function launchSnake() {
+        alert("Launching Snake!"); // Replace with actual game launch logic
+    }
 
-
-
+    function launchChess() {
+        alert("Launching Chess!"); // Replace with actual game launch logic
+    }
 }
