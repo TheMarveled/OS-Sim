@@ -8,7 +8,7 @@
 - **Username Setup**: A customizable setup menu on first load to personalize the OS with your username.
 - **Taskbar with Clock**: Displays a live, 24-hour format clock on the taskbar.
 - **Interactive Desktop**: A clean, responsive desktop with a modern design and smooth user interface.
-- **Customizable Icons**: Icons and elements positioned in a fixed desktop environment.
+- **Customizable Desktop**: Select from one of the many wallpaper and background options go personalise your OS.
 
 ## Features
 - **Responsive UI**: Designed for desktop view with consistent styling and user-friendly elements.
@@ -25,7 +25,7 @@
    ```bash
    git clone https://github.com/TheMarveled/os-sim.git
    ```
-2. Open the `index.html` file in your preferred web browser.
+2. Open the `turn_on.html` file in your preferred web browser.
 3. Enter a username to personalize your experience, and start using OS-Sim!
 
 ## Future Plans
