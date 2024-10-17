@@ -65,3 +65,53 @@ button:hover {
 .guest-option p {
     margin: 0; /* Remove margin from paragraph */
 }
+
+/* Custom alert modal styles */
+.alert-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.alert-modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.alert-modal p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.alert-modal button {
+    padding: 10px 20px;
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alert-modal button:hover {
+    background-color: #0041cc;
+}
+
+/* Show the modal */
+.alert-modal.show {
+    visibility: visible;
+    opacity: 1;
+}

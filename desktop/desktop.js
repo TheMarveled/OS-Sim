@@ -89,4 +89,11 @@ wallpaperImages.forEach(img => {
             startMenu.classList.add('hidden');
         }
     });
+    
+    document.getElementById('help-button').onclick = function() {
+        window.location.href = '/Users/kyledring/Library/Mobile Documents/com~apple~CloudDocs/OS Sim/OS-Sim/common/help/help.html'; }
+
+
+
+
 }
